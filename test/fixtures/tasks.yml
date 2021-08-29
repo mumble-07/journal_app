@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 1
+  task_name: MyString
+  task_body: MyString
+  deadline: 2021-08-29 16:56:41
+  status: MyString
+
+two:
+  category_id: 1
+  task_name: MyString
+  task_body: MyString
+  deadline: 2021-08-29 16:56:41
+  status: MyString
