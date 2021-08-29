@@ -1,0 +1,33 @@
+<%= form_with scope: :task, model: [@category, @task], locale: true do |f| %>
+
+<div>
+  <% if @task.errors.any? %>
+    <ul>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <%end%>
+    </ul>
+  <%end%>
+</div>
+
+<div>
+  <th><%= f.label :"Task Name" %></th>
+  <th><%= f.text_field :task_name %></th>
+</div>
+<div>
+  <th><%= f.label :"Task Body"%></th>
+  <th><%= f.text_field :task_body %></th>
+</div>
+<div>
+  <th><%= f.label :"Deadline"%></th>
+  <th><%= f.date_field :deadline %></th>
+</div>
+<div>
+  <th><%= f.label :"Status"%></th>
+  <th><%= f.text_field :status %></th>
+</div>
+
+<div>
+  <%= f.submit :"Add Task" %>
+ </div>
+<% end %>

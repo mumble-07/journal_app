@@ -21,6 +21,11 @@ class TasksController < ApplicationController
     end
   end
 
+  # def show
+  #   @task = Task.find(params[:id])
+  # end
+
+
 
   private #since naka befor action, dito muna siya pupunta beore niya gawin yung ma other methods/actions
 
