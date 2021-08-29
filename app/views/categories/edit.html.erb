@@ -1,0 +1,24 @@
+<%= form_with scope: :category, model: @category, method: :put, locale: true do |f| %>
+<div>
+  <% if @category.errors.any? %>
+    <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<div class = "form_title">
+  <%= f.label :category_name %>
+  <%= f.text_field :category_name %>
+</div>
+
+<div class = "form_body">
+  <%= f.label :category_body %>
+  <%= f.text_field :category_body %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+<% end %>

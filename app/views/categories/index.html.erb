@@ -1,0 +1,36 @@
+<div>
+  <h1>My Journal App</h1>
+  <div>
+      <%= link_to "Add new category", new_category_path %>
+  </div>
+</div>
+
+
+  <div>
+  <table>
+    <thead>
+      <tr>
+        <div>Category ID</div>
+        <div>Category Name</div>
+        <div>Category Description</div>
+      </tr>
+    </thead>
+    <tbody>
+
+    <div>
+      <%@categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= category.category_name %></td>
+        <td><%= category.category_body %></td>
+    </tr>
+        <div>
+        <td><%= link_to "Edit", edit_category_path(category.id) %></td>
+        <td><%= link_to "Delete", category_path(category.id), method: :delete %></td>
+        <td><%= link_to "Show", category_path(category)%></td>
+      </div>
+      
+      <%end%>
+    </tbody>
+  </table>
+  </div>
