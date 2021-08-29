@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-root 'categories#index'
 
   ########========CONVERT TOU RESOURCES start===============########
   # get '/categories' => 'categories#index', as: 'categories'
@@ -12,9 +11,10 @@ root 'categories#index'
   # put '/categories/:id' => 'categories#update', as: 'category'
   # post '/categories' => 'categories#create', as: 'categories'
   ########========CONVERT TOU RESOURCES end===============########
-
 #  get '/categories' => 'categories#index'
-resources :categories #do
-# end
+resources :categories do
+  resources :tasks#, except: :index
+ end
+ root 'categories#index' #NOTE: dito ata to sa ilalim, kasi nag error sa test for index nung triny ko ulit yung categories_controller_test
 
 end

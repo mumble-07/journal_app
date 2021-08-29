@@ -4,7 +4,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-# ======== trial since I'm using resources :categories -->http://localhost:3000/rails/info/routes 
+# ======== trial since I'm using ``resources :categories``` -->http://localhost:3000/rails/info/routes 
 
   test "Testing for categories#index" do
     assert_routing categories_path, controller: 'categories', action: 'index'
@@ -30,7 +30,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_routing({ method: 'put', path: category_path(1)}, { controller: 'categories', action: 'update', id: "1" })
   end
 
-  test "Testing for categories#delete" do
+  test "Testing for categories#destroy" do
     assert_routing({ method: 'delete', path: category_path(1)}, { controller: 'categories', action: 'destroy', id: "1" })
   end
 #================
