@@ -39,6 +39,15 @@ class TasksController < ApplicationController
       end
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    if @task.destroy
+      redirect_to category_tasks_path(@task.category_id)
+    else
+      render :index
+    end
+  end
+
   private #since naka befor action, dito muna siya pupunta beore niya gawin yung ma other methods/actions
   def get_category
     @category = Category.find(params[:category_id])
