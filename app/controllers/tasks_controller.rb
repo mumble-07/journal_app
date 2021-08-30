@@ -1,10 +1,11 @@
 class TasksController < ApplicationController
 
-  before_action :get_category # taga query
+  #before_action :get_category # taga query
 
   def index
-    #@tasks = task.all #ito ay lahat ng tasks
-    @tasks = @category.tasks  
+    @category_id = params[:category_id]
+    @tasks = Category.find(params[:category_id]).tasks 
+    #@tasks = @category.tasks  
   end
 
   def new
@@ -22,25 +23,23 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:category_id]) #mali to ata
+    @task = Task.find(params[:id]) 
   end
 
   def edit
-    @task = Task.find(params[:category_id])  #mali to ata
+    @task = Task.find(params[:id])  
   end
   
   def update
-    @task = Task.find(params[:category_id])  #mali to ata
+    @task = Task.find(params[:id])  
       if @task.update(task_params)
-        redirect_to category_tasks_path
+        redirect_to category_tasks_path(@task.category_id)
       else
         render :edit
       end
   end
 
-
   private #since naka befor action, dito muna siya pupunta beore niya gawin yung ma other methods/actions
-
   def get_category
     @category = Category.find(params[:category_id])
   end 
