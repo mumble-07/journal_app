@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  #before_action :get_category # taga query
+  before_action :get_category # taga query
 
   def index
     @category_id = params[:category_id]
@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = @category.tasks.build #instead of .new para sa has_many .build ang gagamitin
+    @task = @category.tasks.build
   end
 
   def create
