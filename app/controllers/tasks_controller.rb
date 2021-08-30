@@ -21,10 +21,22 @@ class TasksController < ApplicationController
     end
   end
 
-  # def show
-  #   @task = Task.find(params[:id])
-  # end
+  def show
+    @task = Task.find(params[:category_id]) #mali to ata
+  end
 
+  def edit
+    @task = Task.find(params[:category_id])  #mali to ata
+  end
+  
+  def update
+    @task = Task.find(params[:category_id])  #mali to ata
+      if @task.update(task_params)
+        redirect_to category_tasks_path
+      else
+        render :edit
+      end
+  end
 
 
   private #since naka befor action, dito muna siya pupunta beore niya gawin yung ma other methods/actions

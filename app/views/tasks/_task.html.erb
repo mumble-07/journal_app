@@ -1,0 +1,31 @@
+<div>
+<div>
+    <h1>SHOW TASK</h1>
+    
+  </div>
+  <div>
+    Task ID: <%= @task.id %>
+  </div>
+
+  <div>
+    Task Name: <%= @task.task_name %>
+  </div>
+
+  <div>
+    Task Description: <%= @task.task_body %>
+  </div>
+</div>
+
+  <div>
+    Task Deadline: <%= @task.deadline %>
+  </div>
+
+  <div>
+    Task Status: <%= @task.status %>
+  </div>
+</div>
+
+<div class = "back_button">
+  <td><%= link_to "Back", category_tasks_path %></td>
+  <!--<td><%= link_to "Add task", new_category_task_path(category_id: @category.id) %></td> redirected to new.html.erb--->
+</div>

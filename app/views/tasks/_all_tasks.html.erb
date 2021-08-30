@@ -7,6 +7,8 @@
       <th>category_id</th>
       <th>Deadline</th>
       <th>Status</th>
+      <th>CREATED AT</th>
+
     </tr>
   </thead>
 
@@ -20,9 +22,15 @@
       <td><%= task.category_id %></td>
       <td><%= task.deadline %></td>
       <td><%= task.status %></td>
+      <td><%= task.created_at %></td>
+
+      <td><%= link_to "Edit", edit_category_task_path(@category, @tasks) %></td> 
+      <td><%= link_to "Show", category_task_path(@category, @tasks) %></td> 
     </tr>
+
     
     <%end%>
+
   </tbody>
 </table>
 
