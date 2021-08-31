@@ -1,0 +1,15 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+
+body {
+  background-color: rgb(228, 228, 228);
+}
+
+.btn.btn-primary a, 
+.btn.btn-secondary a, 
+.btn.btn-danger a {
+text-decoration: none;
+color: yellow ;
+}
+
+

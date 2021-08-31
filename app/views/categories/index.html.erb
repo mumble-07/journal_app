@@ -1,36 +1,32 @@
 <div>
   <h1>My Journal App</h1>
   <div>
-      <%= link_to "Add new category", new_category_path %>
+    <button type="button" class="btn btn-primary"><%= link_to "Add new category", new_category_path %></button>
   </div>
 </div>
 
 
   <div>
   <table>
-    <thead>
       <tr>
-        <div>Category ID</div>
-        <div>Category Name</div>
-        <div>Category Description</div>
+        <td>Category ID</td>
+        <td>Category Name</td>
+        <td>Category Description</td>
       </tr>
-    </thead>
-    <tbody>
 
-    <div>
       <%@categories.each do |category| %>
       <tr>
         <td><%= category.id %></td>
         <td><%= category.category_name %></td>
         <td><%= category.category_body %></td>
-    </tr>
+        
         <div>
-        <td><%= link_to "Edit", edit_category_path(category.id) %></td>
-        <td><%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
-        <td><%= link_to "Show", category_path(category)%></td>
-      </div>
-      
+          <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_path(category.id) %></button></td>
+          <td><button type="button" class="btn btn-secondary"><%= link_to "Show", category_path(category)%></button></td>
+          <td><button type="button" class="btn btn-danger"><%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?" } %></button></td>
+        </div>
+      </tr>
       <%end%>
-    </tbody>
+
   </table>
   </div>
