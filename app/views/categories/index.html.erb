@@ -16,20 +16,27 @@
         <td>Category ID</td>
         <td>Category Name</td>
         <td>Category Description</td>
+        <td>User ID</td>
       </tr>
 
+      
+
       <%@categories.each do |category| %>
+      <%if category.user == current_user%>
       <tr>
         <td><%= category.id %></td>
         <td><%= category.category_name %></td>
         <td><%= category.category_body %></td>
+        <td><%= category.user_id %></td>
         
         <div>
-          <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_path(category.id) %></button></td>
           <td><button type="button" class="btn btn-secondary"><%= link_to "Show", category_path(category)%></button></td>
           <td><button type="button" class="btn btn-danger"><%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?" } %></button></td>
+          <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_path(category.id) %></button></td>
+        
         </div>
       </tr>
+      <%end%>
       <%end%>
 
   </table>

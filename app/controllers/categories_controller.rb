@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
   def index
     @categories = Category.all
   end
@@ -13,11 +16,13 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    #@category = Category.new
+    @category = current_user.categories.build
   end
 
   def create
-    @category = Category.new(category_params)
+    #@category = Category.new(category_params)
+     @category = current_user.categories.build(category_params)
       if @category.save
         redirect_to categories_path
       else
@@ -47,6 +52,12 @@ class CategoriesController < ApplicationController
     end
   end
   
+  def correct_user
+    @category = current_user.categories.find_by(id: params[:id])
+    redirect_to categories_path, notice: "Not Authorized to edit this category" if @category.nil?
+  end
+
+
   private
   def category_params
     params.require(:category).permit(:category_name, :category_body, :user_id)
