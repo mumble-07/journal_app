@@ -1,9 +1,14 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+$mainFont: 'Righteous', cursive;;
 
 body {
   background-color: rgb(228, 228, 228);
-}
+  background-image: url("../images/");
+  }
+
 
 .btn.btn-primary a, 
 .btn.btn-secondary a, 
@@ -13,3 +18,15 @@ color: yellow ;
 }
 
 
+
+.navbar-brand {
+font: 180% $mainFont !important;
+margin-left: 5%;
+
+}
+
+#navbarSupportedContent {
+  color: black;
+font: 130% $mainFont !important;
+  margin-right: 5%;
+}

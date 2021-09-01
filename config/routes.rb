@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 resources :categories do
   resources :tasks#, except: :index
  end
- root 'categories#index' #NOTE: dito ata to sa ilalim, kasi nag error sa test for index nung triny ko ulit yung categories_controller_test
-
+ #root 'categories#index' #NOTE: dito ata to sa ilalim, kasi nag error sa test for index nung triny ko ulit yung categories_controller_test
+root 'home#index'
 end

@@ -1,0 +1,14 @@
+<%= render "shared/navbar"%>
+
+<div class ="container">
+
+  <h1> Welcome to TARDIS Lanruoj! </h1>
+  <h5> Your time and relative dimension in space journal </h5>
+  <h6> It's bigger on the inside! Aren't you curious?</h6>
+<div>
+<% if user_signed_in? %>
+  <button type="button" class="btn btn-dark"><%= link_to 'Dashboard', categories_path, class: 'nav-link' %></button>
+    <% else %>
+ <button type="button" class="btn btn-dark"><%= link_to 'Try me now!', new_user_registration_path, class: 'nav-link' %></button>
+  <%end%>
+</div>

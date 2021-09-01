@@ -1,16 +1,16 @@
 <%= render "shared/navbar"%>
-<div>
+
+<div class="row">
   <h1>My Journal App</h1>
   <div>
     <button type="button" class="btn btn-primary"><%= link_to "Add new category", new_category_path %></button>
   </div>
 
-  <%= name = current_user.present? ? current_user.email : "Stranger" %>
+  <%= name = current_user.present? ? current_user.first_name : "Stranger" %>
 
-<h1>Welcome, <%= name %> </h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1>Welcome, <%= current_user.first_name %> </h1>
 
-  <div>
+  <div >
   <table>
       <tr>
         <td>Category ID</td>
