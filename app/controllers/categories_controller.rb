@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
+    @tasks = Task.all
   end
 
   def show 

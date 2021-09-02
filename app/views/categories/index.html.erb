@@ -40,4 +40,30 @@
       <%end%>
 
   </table>
+
+<div>
+  <h1>Deadlines</h1>
+    <%@tasks.each do |task| %>
+  <%if task.deadline == Date.today%>
+    <h1>SHOW TASK</h1>
+    
+      <div>
+        Task ID: <%= task.id %>
+      </div>
+      <div>
+        Task Name: <%= task.task_name %>
+      </div>
+      <div>
+        Task Description: <%= task.task_body %>
+      </div>
+      <div>
+        Task Deadline: <%= task.deadline %>
+      </div>
+      <div>
+        Task Status: <%= task.status %>
+    </div>
+  </div>   
+    <%end%>
+  <%end%>
   </div>
+</div>
