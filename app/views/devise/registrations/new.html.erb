@@ -38,12 +38,10 @@
 
 <div class = "register_form_action_button">
   <div class="actions">
-  
-    <%= f.submit "Sign up" %>
+    <div>
+      <%= f.submit "Sign up" %>
+      <button type="button" class="btn btn-outline-dark"><%= render "devise/shared/links" %></button>
+    </div>
   </div>
 <% end %>
-
-<button type="button" class="btn btn-outline-dark"><%= render "devise/shared/links" %></button>
-
-
 </div>
