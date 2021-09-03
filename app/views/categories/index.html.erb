@@ -38,7 +38,6 @@
 
     <div class="dashboard_column_2">
       <h2>Deadlines</h2>
-      <%@categories.each do |category| %>
         <%@tasks.each do |task| %>
           <%if task.user == current_user%>
               <%if task.deadline == Date.today%>
@@ -54,9 +53,7 @@
                       <h2>Task Description: <%= task.task_body %></h2>
                       <h2>Task Deadline: <%= task.deadline %></h2>
                       <h2>Task Status: <%= task.status %></h2>
-                      <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_task_path(category, task.category_id, task.id) %></button></td> 
-                      <td><button type="button" class="btn btn-danger"><%= link_to "Show", category_task_path(category, task.category_id, task.id) %></button></td> 
-                      <td><button type="button" class="btn btn-secondary"><%= link_to "Delete", category_task_path(category, task.category_id, task.id),method: :delete, data: { confirm: "Are you sure?" } %></button></td> 
+                      
                       
                     </p>
                   </div>
@@ -65,7 +62,6 @@
               <%end%>
           <%end%>
         <%end%>
-      <%end%>
     </div>
   </div>
 </div>
