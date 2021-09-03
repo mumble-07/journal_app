@@ -1,5 +1,6 @@
 <%= form_with scope: :task, model: [@task.category, @task], locale: true do |f| %>
 
+<div class="container-lg">
 <div>
   <% if @task.errors.any? %>
     <ul>
@@ -10,30 +11,39 @@
   <%end%>
 </div>
 
-<div>
+<div class="field_task">
   <th><%= f.label :"Task Name" %></th>
   <th><%= f.text_field :task_name %></th>
 </div>
-<div>
+
+<div class="field_task">
   <th><%= f.label :"Task Body"%></th>
   <th><%= f.text_field :task_body %></th>
 </div>
-<div>
+
+<div class="field_task">
   <th><%= f.label :"Deadline"%></th>
   <th><%= f.date_field :deadline %></th>
 </div>
-<div>
+
+<div class="field_task_radio">
   <th><%= f.label :"Status"%></th>
-  <th><%= f.text_field :status %></th>
+ <div><%= f.radio_button :status, 'On-going' %>On-going</div> 
+  <div><%= f.radio_button :status, 'Completed' %>Completed</div>
 </div>
 
-<div>
-  <th><%= f.label :"User"%></th>
+
+
+
+
+<div class="field_task">
+  <!--<th><%= f.label :"User"%></th>-->
   <th><%= f.number_field :user_id, id: :task_user_id, value: current_user.id, type: :hidden %></th>
 </div>
 
 <div>
-  <%= f.submit :"Add Task" %>
-  <%= link_to "Cancel", category_tasks_path %>
+    <button type="button" class="btn btn-outline-light"><%= f.submit :"Add Task" %></button>
+    <button type="button" class="btn btn-outline-light"><%= link_to "Cancel", category_tasks_path %></button>
  </div>
 <% end %>
+</div>

@@ -1,18 +1,24 @@
-<div class = "show_container">
-  <div class = "show_id_container">
+<div class = container-lg>
+
+  <!--<div>
     ID: <%= category.id %>
+  </div>-->
+<div class = "category_show_container">
+  <div class = "category_name_label">
+    <h1>Category Name:</h1> 
+    <h2><%= category.category_name %></h2>
   </div>
 
-  <div class = "show_name_container">
-    Category Name: <%= category.category_name %>
+  <div class = "category_description_label">
+    <h1>category Description: </h2> 
+    <h2><%= category.category_body %></h2> 
+  </div>
+  
+  </div>
+  <div>
+     <td><button type="button" class="btn btn-outline-dark"><%= link_to "Back", categories_path %></button></td>
+    <!--<td><%= link_to "Add task", new_category_task_path(category_id: @category.id) %></td> redirected to new.html.erb--->
+      <td><%= link_to "Show task", category_tasks_path(category_id: @category.id) %></td> <!--redirected to index.html.erb-->
   </div>
 
-  <div class = "show_body_container">
-    category Description: <%= category.category_body %>
-  </div>
-</div>
-<div class = "back_button">
-  <td><%= link_to "Back", categories_path %></td>
-  <!--<td><%= link_to "Add task", new_category_task_path(category_id: @category.id) %></td> redirected to new.html.erb--->
-    <td><%= link_to "Show task", category_tasks_path(category_id: @category.id) %></td> <!--redirected to index.html.erb-->
 </div>

@@ -20,6 +20,12 @@ text-decoration: none;
 color: white ;
 }
 
+button a {
+  
+text-decoration: none;
+
+}
+
 // NAVBAR ==================================
 
 
@@ -86,7 +92,6 @@ margin-right: 5%;
 
 // NEW SIGN UP FORM ==================================
 
-.container-lg, 
 .container-lg {
   height: 80vh;
   background-color: white;
@@ -96,7 +101,7 @@ margin-right: 5%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  h2 {
+  h2, h1 {
   font: 250% $mainFont !important;
   color: black;
   }
@@ -146,10 +151,18 @@ font: 100% $mainFont;
   height: 80vh;
   border-radius: 50px;
   margin-top: 5%;
-  
+  margin-left: 5%;
+  margin-right: 5%;
   h1 {
+  font: 550% $mainFont !important;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  }
+  h2 {
   font: 250% $mainFont !important;
   color: white;
+  margin: 0 auto;
   }
   h4 {
   margin-bottom: 3%;
@@ -157,4 +170,121 @@ font: 100% $mainFont;
   color: black;
   }
 
+}
+
+.add_category_button {
+  margin-right: 10%;
+  margin-top:1%;
+  margin-bottom: 2%;
+  display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dashbard-container {
+  display: grid;
+  grid-template-columns: 5% 55% 40%;
+}
+
+.dashbaord_column_1 {
+  margin-right: 5%;
+  margin-left: 5%;
+ font: 120% $mainFont !important;
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  td {
+    color: white;
+  }
+}
+
+.dashbaord_column_2 {
+  grid-column-start:4;
+  grid-column-end: 6;
+  }
+
+.dashboard_deadline_label {
+  h1 {
+  font: 50% $mainFont !important;
+  color: black;
+    }
+  h2 {
+  font: 100% $mainFont !important;
+  color: white;
+    }
+}
+
+// SHOW TASK ==================================
+
+
+.category_name_label,
+.category_description_label {
+  margin-bottom: 5%;
+
+  h1 {
+  margin-bottom: 3%;
+  font: 220% $mainFont !important;
+  color: black;
+  }
+  h2 {
+  margin-bottom: 3%;
+  font: 170% $mainFont !important;
+  color: rgb(153, 8, 8);
+  }
+}
+
+.task_container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+    margin-left: 5%;
+
+}
+
+// FORM TASK ==================================
+
+.field_task {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  font:110% $mainFont !important;
+  color: black;
+}
+.field_task_radio {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  font:110% $mainFont !important;
+  color: black;
+}
+
+// TASK DISPLAY ==================================
+
+.task_display {
+display: flex;
+flex-direction: column;
+h1 {
+  margin-bottom: 4%;
+  font: 150% $mainFont !important;
+  color: black;
+
+  }
+  h3 {
+  margin-bottom: 3%;
+  font: 120% $mainFont !important;
+  color: rgb(153, 8, 8);
+  }
+}
+
+.task_name_header {
+  h1 {
+  margin-bottom: 3%;
+  font: 350% $mainFont !important;
+  color: black;
+  margin-top: -100%;
+  margin-bottom: 30%;
+  }
 }

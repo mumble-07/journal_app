@@ -1,5 +1,7 @@
 <%= form_with scope: :category, model: @category, locale: true do |f| %>
-<div class = "validation_error">
+
+
+<div class="container-lg">
   <% if @category.errors.any? %>
     <ul>
       <% @category.errors.full_messages.each do |message| %>
@@ -7,23 +9,29 @@
       <%end%>
     </ul>
   <%end%>
-</div>
 
-<div class = "form_title">
+<div>
+<div class="field">
   <th><%= f.label :Category %></th>
   <th><%= f.text_field :category_name %></th>
 </div>
-<div class = "form_body">
+<div class="field">
   <th><%= f.label :Description%></th>
   <th><%= f.text_field :category_body %></th>
 </div>
 
- <div class = "form_user_id">
+ <div class="field">
 <!--<th><%= f.label :"User ID"%></th>-->
   <th><%= f.number_field :user_id, id: :category_user_id, value: current_user.id, type: :hidden %></th>
 </div>
 
 <div class = "form_button">
-  <%= f.submit :"Add Category" %>
- </div>
+  <button type="button" class="btn btn-outline-light"><%= f.submit :"Add Category" %></button>
+  <button type="button" class="btn btn-outline-light"><%= link_to "Back", categories_path %></button>
+
+
+</div>
+
+
 <% end %>
+</div>

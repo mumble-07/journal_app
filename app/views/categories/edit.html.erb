@@ -1,7 +1,8 @@
 <%= render "shared/navbar"%>
 
 <%= form_with scope: :category, model: @category, method: :put, locale: true do |f| %>
-<div>
+
+<div class="container-lg">
   <% if @category.errors.any? %>
     <ul>
       <% @category.errors.full_messages.each do |message| %>
@@ -9,18 +10,23 @@
       <% end %>
     </ul>
   <% end %>
-</div>
-<div class = "form_title">
+<div class="field">
   <%= f.label :category_name %>
   <%= f.text_field :category_name %>
 </div>
 
-<div class = "form_body">
+<div class="field">
   <%= f.label :category_body %>
   <%= f.text_field :category_body %>
 </div>
 
-<div>
+<div class="action-buttons-login">
   <%= f.submit %>
 </div>
+
+</div>
+
+  <%= link_to "Back", categories_path %>
+
+  <button type="button" class="btn btn-outline-dark"><%= link_to "Back", categories_path %></button>
 <% end %>

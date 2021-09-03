@@ -1,85 +1,65 @@
 <%= render "shared/navbar"%>
 
 <div class="dashboard-page">
-  <h1>DASHBOARD</h1>
-  <div>
+    <h1>DASHBOARD</h1>
+  <%= current_user.present? ? "" : "Stranger" %>
+    <h2>Welcome, <%= current_user.first_name %> </h2>
+  <div class = "add_category_button">
     <button type="button" class="btn btn-primary"><%= link_to "Add new category", new_category_path %></button>
   </div>
 
-  <%= name = current_user.present? ? current_user.first_name : "Stranger" %>
+  <div class="dashbard-container">
+    <div class="dashbaord_column_1">
+          <table class = "table">
+            <tr scope="row">
+              <%# <td>Category ID</td> %>
+              <td>Category Name</td>
+              <td>Category Description</td>
+              <%# <td>User ID</td> %>
+            </tr>
 
-<h1>Welcome, <%= current_user.first_name %> </h1>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      
-  <div >
-  <table>
-      <tr>
-        <td>Category ID</td>
-        <td>Category Name</td>
-        <td>Category Description</td>
-        <td>User ID</td>
-      </tr>
-      <%@categories.each do |category| %>
-      <%if category.user == current_user%>
-      <tr>
-        <td><%= category.id %></td>
-        <td><%= category.category_name %></td>
-        <td><%= category.category_body %></td>
-        <td><%= category.user_id %></td>
-        
-        <div>
-          <td><button type="button" class="btn btn-secondary"><%= link_to "Show", category_path(category)%></button></td>
-          <td><button type="button" class="btn btn-danger"><%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?" } %></button></td>
-          <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_path(category.id) %></button></td>
-        
-        </div>
-      </tr>
-      <%end%>
-      <%end%>
-
-  </table>
-
-<div>
+        <%@categories.each do |category| %>
+          <%if category.user == current_user%>
+          <tr scope="row">
+            <!--<td><%= category.id %></td>-->
+            <td><%= category.category_name %></td>
+            <td><%= category.category_body %></td>
+            <!--<td><%= category.user_id %></td>-->
+            <div>
+              <td><button type="button" class="btn btn-secondary"><%= link_to "Show", category_path(category)%></button></td>
+              <td><button type="button" class="btn btn-danger"><%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?" } %></button></td>
+              <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_path(category.id) %></button></td>
+            </div>
+            </tr>
+          <%end%>
+        <%end%>
+      </table>
     </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      
-  <h1>Deadlines</h1>
-    <%@tasks.each do |task| %>
-    <%if task.user == current_user%>
-      <%if task.deadline == Date.today%>
-      <div>
-        Task ID: <%= task.id %>
-      </div>
-      <div>
-        Task Name: <%= task.task_name %>
-      </div>
-      <div>
-        Task Description: <%= task.task_body %>
-      </div>
-      <div>
-        Task Deadline: <%= task.deadline %>
-      </div>
-      <div>
-        Task Status: <%= task.status %>
-    </div>
-  </div>   
-    <%end%>
-  <%end%>
-  <%end%>
 
-  </div>
-</div>
+    <div class="dashboard_column_2">
+      <h2>Deadlines</h2>
+        <%@tasks.each do |task| %>
+          <%if task.user == current_user%>
+              <%if task.deadline == Date.today%>
 
+              <div class = "dashboard_deadline_label">
+                <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                  <div class="card-header"><h2>Task Name:<%= task.task_name %></h2></div>
+                  <div class="card-body">
+                    <p class="card-text">
+                    <h2>Task Name:<%= task.task_name %></h2>
+                      <h2>Task Description: <%= task.task_body %></h2>
+                      <h2>Task Deadline: <%= task.deadline %></h2>
+                      <h2>Task Status: <%= task.status %></h2>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <%end%>
+          <%end%>
+        <%end%>
     </div>
   </div>
+  
 </div>
-
-
-
 

@@ -1,28 +1,30 @@
-<div>
-<div>
-    <h1>SHOW TASK</h1>
-  </div>
-  <div>
-    Task ID: <%= @task.id %>
-  </div>
-  <div>
-    Task Name: <%= @task.task_name %>
-  </div>
-  <div>
-    Task Description: <%= @task.task_body %>
-  </div>
-</div>
+<div class = container-lg>
+    <div class = "task_name_header">
+      <h1><%= @task.task_name%></h1>
+    </div>
+<div class ="task_display">
+    <div>
+      <h1>Task ID:</h1>
+      <h3><%= @task.id %></h3>
+     </div>
+    <div>
+      <h1>Task Name:</h1>
+     <h3><%= @task.task_name %></h3>
+     </div>
+    <div>
+      <h1>Task Description:</h1>
+      <h3><%= @task.task_body %></h3>
+     </div>
+    <div> 
+      <h1>Task Deadline:</h1>
+     <h3><%= @task.deadline %></h3>
+    </div>
+    <div>
+      <h1>Task Status:</h1> 
+      <h3><%= @task.status %></h3>
+    </div>
+    
+   <td><button type="button" class="btn btn-outline-dark"><%= link_to "Back", category_tasks_path %></button></td>
+    
 
-  <div>
-    Task Deadline: <%= @task.deadline %>
-  </div>
-
-  <div>
-    Task Status: <%= @task.status %>
-  </div>
-</div>
-
-<div class = "back_button">
-  <td><%= link_to "Back", category_tasks_path %></td>
-  
 </div>
