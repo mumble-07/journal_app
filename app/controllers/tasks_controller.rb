@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :get_category # taga query
 
   def index
@@ -54,6 +55,6 @@ class TasksController < ApplicationController
   end 
 
   def task_params
-    params.require(:task).permit(:task_name, :task_body, :deadline, :status, :category_id) #need pa rin isama si :category_id kasi hahanapin ata ni rails itong parameter
+    params.require(:task).permit(:task_name, :task_body, :deadline, :status, :category_id, :user_id) #need pa rin isama si :category_id kasi hahanapin ata ni rails itong parameter
   end
 end

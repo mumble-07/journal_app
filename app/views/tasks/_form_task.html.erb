@@ -28,6 +28,11 @@
 </div>
 
 <div>
+  <th><%= f.label :"User"%></th>
+  <th><%= f.number_field :user_id, id: :task_user_id, value: current_user.id, type: :hidden %></th>
+</div>
+
+<div>
   <%= f.submit :"Add Task" %>
   <%= link_to "Cancel", category_tasks_path %>
  </div>

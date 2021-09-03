@@ -51,7 +51,8 @@
       
   <h1>Deadlines</h1>
     <%@tasks.each do |task| %>
-  <%if task.deadline == Date.today%>
+    <%if task.user == current_user%>
+      <%if task.deadline == Date.today%>
    
       <div>
         Task ID: <%= task.id %>
@@ -71,6 +72,8 @@
   </div>   
     <%end%>
   <%end%>
+  <%end%>
+  
   </div>
 </div>
 
