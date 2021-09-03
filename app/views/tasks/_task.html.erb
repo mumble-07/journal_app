@@ -1,15 +1,20 @@
 <div class = container-lg>
     <div class = "task_name_header">
+      
       <h1><%= @task.task_name%></h1>
     </div>
 <div class ="task_display">
-    <div>
+    <!--<div>
       <h1>Task ID:</h1>
       <h3><%= @task.id %></h3>
+     </div>-->
+     <div>
+      <h1>Categroy Name:</h1>
+      <h3><%= @category.category_name %></h3>
      </div>
     <div>
       <h1>Task Name:</h1>
-     <h3><%= @task.task_name %></h3>
+      <h3><%= @task.task_name %></h3>
      </div>
     <div>
       <h1>Task Description:</h1>

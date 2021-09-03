@@ -24,6 +24,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @category_id = params[:category_id]
     @task = Task.find(params[:id]) 
   end
 

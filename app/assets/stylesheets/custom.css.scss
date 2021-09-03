@@ -148,6 +148,7 @@ font: 100% $mainFont;
 // DASH BOARD ==================================
 
 .dashboard-page {
+  overflow-y: scroll;
   height: 80vh;
   border-radius: 50px;
   margin-top: 5%;
@@ -200,20 +201,20 @@ font: 100% $mainFont;
 }
 
 .dashbaord_column_2 {
+  overflow-y: scroll;
   grid-column-start:4;
   grid-column-end: 6;
   }
 
 .dashboard_deadline_label {
-  h1 {
-  font: 50% $mainFont !important;
-  color: black;
-    }
+
   h2 {
   font: 100% $mainFont !important;
-  color: white;
+  color: black;
     }
 }
+
+
 
 // SHOW TASK ==================================
 
@@ -240,7 +241,16 @@ font: 100% $mainFont;
   margin-right: 5%;
     margin-left: 5%;
 
+    th {
+        font: 200% $mainFont !important;
+  color: white;
+    }
+     td {
+        font: 120% $mainFont !important;
+  color: white;
+    }
 }
+
 
 // FORM TASK ==================================
 

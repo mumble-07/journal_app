@@ -38,19 +38,26 @@
 
     <div class="dashboard_column_2">
       <h2>Deadlines</h2>
+      <%@categories.each do |category| %>
         <%@tasks.each do |task| %>
           <%if task.user == current_user%>
               <%if task.deadline == Date.today%>
 
               <div class = "dashboard_deadline_label">
                 <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-                  <div class="card-header"><h2>Task Name:<%= task.task_name %></h2></div>
+                  <div class="card-header">
+                  <h2>Task Name:<%= task.task_name %></h2>
+                  </div>
                   <div class="card-body">
                     <p class="card-text">
                     <h2>Task Name:<%= task.task_name %></h2>
                       <h2>Task Description: <%= task.task_body %></h2>
                       <h2>Task Deadline: <%= task.deadline %></h2>
                       <h2>Task Status: <%= task.status %></h2>
+                      <td><button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_category_task_path(category, task.category_id, task.id) %></button></td> 
+                      <td><button type="button" class="btn btn-danger"><%= link_to "Show", category_task_path(category, task.category_id, task.id) %></button></td> 
+                      <td><button type="button" class="btn btn-secondary"><%= link_to "Delete", category_task_path(category, task.category_id, task.id),method: :delete, data: { confirm: "Are you sure?" } %></button></td> 
+                      
                     </p>
                   </div>
                 </div>
@@ -58,8 +65,8 @@
               <%end%>
           <%end%>
         <%end%>
+      <%end%>
     </div>
   </div>
-  
 </div>
 
