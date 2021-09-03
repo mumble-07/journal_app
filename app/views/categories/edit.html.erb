@@ -1,3 +1,5 @@
+<%= render "shared/navbar"%>
+
 <%= form_with scope: :category, model: @category, method: :put, locale: true do |f| %>
 <div>
   <% if @category.errors.any? %>

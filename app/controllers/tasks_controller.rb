@@ -49,6 +49,11 @@ class TasksController < ApplicationController
     end
   end
 
+  # def correct_user
+  #   @task = current_user.tasks.find_by(id: params[:id])
+  #   redirect_to categories_path, notice: "Not Authorized to edit this category" if @category.nil?
+  # end
+
   private #since naka befor action, dito muna siya pupunta beore niya gawin yung ma other methods/actions
   def get_category
     @category = Category.find(params[:category_id])
