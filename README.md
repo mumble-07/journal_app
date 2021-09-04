@@ -2,11 +2,11 @@
 
 CREATED BY: mumble-07
 
-##PROJECT NAME: TARDIS Lanruoj 
-####Inspired from Doctor Who Series
+**ROJECT NAME: TARDIS Lanruoj** 
+****Inspired from Doctor Who Series****
 
-###TARDIS == Time And Relative Dimension In Space 
-###Lanruoj == Journal
+TARDIS == Time And Relative Dimension In Space 
+Lanruoj == Journal
 
 ***HOME PAGE***
 
@@ -16,24 +16,24 @@ CREATED BY: mumble-07
 
 ![image](https://user-images.githubusercontent.com/73781775/132082214-4b727fdc-ced7-4812-8802-f70406dd4ee2.png)
 
-###### Clicking TARDIS upper left --> Root or Home page 
-###### Clicking Sign In link --> Log in page
-###### when logged in sign in will changed to sign out
-###### Clicking Register --> Sign up page
-###### Clicking Hoe --> Back to Home page
-###### CTA "TRY ME NOW" --> Sign up page
+- Clicking TARDIS upper left --> Root or Home page 
+- Clicking Sign In link --> Log in page
+- When logged in sign in will changed to sign out
+- Clicking Register --> Sign up page
+- Clicking Hoe --> Back to Home page
+- CTA "TRY ME NOW" --> Sign up page
 
 ***SIGN UP PAGE || TRY ME NOW PAGE || REGISTER PAGE***
 
 ![image](https://user-images.githubusercontent.com/73781775/132083476-7063dd63-7667-4561-ad7d-f2b3b98756fa.png)
 
-####All fields required 
-######Password must be min of 6 characters
+All fields required 
+Password must be min of 6 characters
 
 ***LOG IN PAGE DUMMY CREDENTIALS***
 
-######email: mumble@tardis.com
-######pw: asdf123
+-- email: mumble@tardis.com
+-- pw: asdf123
 
 ![image](https://user-images.githubusercontent.com/73781775/132083568-389c01e1-51ec-499d-8d1f-59e275891542.png)
 
@@ -48,26 +48,25 @@ CREATED BY: mumble-07
 
 ![image](https://user-images.githubusercontent.com/73781775/132083582-3ce6cd86-f5d6-4e2f-a49c-1857e9c23956.png)
 
-#### Same navigation bar
-#### Scrollable 
+-- Same navigation bar
+-- Scrollable 
 
-### LEFT SIDE
-#### Greets current user
-#### Display table of all categories
-#### table has action buttons
-  >> SHOW
-  >> EDIT
-  >> DELETE
+-- LEFT SIDE
+-- Greets current user
+-- Display table of all categories
+-- table has action buttons
+  -- SHOW
+  -- EDIT
+  -- DELETE
 
 ![image](https://user-images.githubusercontent.com/73781775/132083771-b6790305-42f1-4821-971d-d9a1901002bd.png)
 
 
-### RIGHT SIDE
-#### Add New Category button
-#### Display Today's deadline list of tasks
+- RIGHT SIDE
+- Add New Category button
+- Display Today's deadline list of tasks
 
 ![image](https://user-images.githubusercontent.com/73781775/132083763-9f77b87a-5a3b-4838-b466-35b2fc78814b.png)
-
 
 ***SHOW CATEGORY CARD***
 
@@ -94,9 +93,9 @@ CREATED BY: mumble-07
 
 #### Display table of all tasks
 #### table has action buttons
-  >> EDIT
-  >> SHOW
-  >> DELETE
+-- DIT
+-- SHOW
+-- DELETE
 
 
 
