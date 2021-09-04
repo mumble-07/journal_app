@@ -55,22 +55,61 @@ CREATED BY: mumble-07
 #### Greets current user
 #### Display table of all categories
 #### table has action buttons
-  >>> SHOW
-  >>> EDIT
-  >>> DELETE
+  >> SHOW
+  >> EDIT
+  >> DELETE
+
+![image](https://user-images.githubusercontent.com/73781775/132083771-b6790305-42f1-4821-971d-d9a1901002bd.png)
+
 
 ### RIGHT SIDE
 #### Add New Category button
 #### Display Today's deadline list of tasks
+
+![image](https://user-images.githubusercontent.com/73781775/132083763-9f77b87a-5a3b-4838-b466-35b2fc78814b.png)
+
 
 ***SHOW CATEGORY CARD***
 
 ![image](https://user-images.githubusercontent.com/73781775/132083652-df76aebb-8089-4e34-95a2-b6896dd7e051.png)
 
 
-***DELETE BUTTON CONFIRMATION ALERT***
+***DELETE CATEGORY BUTTON CONFIRMATION ALERT***
 
 ![image](https://user-images.githubusercontent.com/73781775/132083685-eeeebb82-f941-4903-b7fd-e5d4eb6b2d95.png)
 
+***EDIT CATEGORY BUTTON FORM***
+
+![image](https://user-images.githubusercontent.com/73781775/132083720-bb275b13-bf49-4c89-9958-75141124f152.png)
+
+***CREATE NEW CATEGORY BUTTON FORM***
+
+![image](https://user-images.githubusercontent.com/73781775/132083735-47229522-afa2-45df-a4b4-8a32ebd7b9fa.png)
+
+***SHOW TASK BUTTOM FROM CATEGORY CARD ==> DISPLAYING ALL TASKS UDER THAT CATEGORY***
+
+![image](https://user-images.githubusercontent.com/73781775/132083785-0dacb6ff-346f-4566-9e1b-a1c75e3e08e4.png)
+
+#### Same navigation bar
+
+#### Display table of all tasks
+#### table has action buttons
+  >> EDIT
+  >> SHOW
+  >> DELETE
+
+
+
+***EDIT TASK BUTTON***
+
+![image](https://user-images.githubusercontent.com/73781775/132083828-dc1f82e3-d227-4795-ac59-e5eaba38e763.png)
+
+***SHOW TASK BUTTON ==> TASK CARD***
+
+![image](https://user-images.githubusercontent.com/73781775/132083844-e8f4a52e-49c2-47a9-8021-0d4a1d84d572.png)
+
+***DELETE TASK BUTTON CONFIRMATION ALERT***
+
+![image](https://user-images.githubusercontent.com/73781775/132083858-58b3432a-9dbd-450f-9e72-4e794b3e0a84.png)
 
 
