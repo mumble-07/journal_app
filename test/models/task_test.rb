@@ -1,44 +1,45 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class TaskTest < ActiveSupport::TestCase
-
- test "This test should not save because there is no task_name" do
+  test 'This test should not save because there is no task_name' do
     task = Task.new
-    #task.task_name = 'Journal App Project'
+    # task.task_name = 'Journal App Project'
     task.task_body = 'This task is to create a journal app with CRUD'
     task.deadline = Date.today
     task.status = 'On-going'
-    
-    assert_not task.save, "Saved the task without the task_name"
+
+    assert_not task.save, 'Saved the task without the task_name'
   end
 
-  test "This test should not save because there is no task_body" do
+  test 'This test should not save because there is no task_body' do
     task = Task.new
     task.task_name = 'Journal App Project'
-    #task.task_body = 'This task is to create a journal app with CRUD'
+    # task.task_body = 'This task is to create a journal app with CRUD'
     task.deadline = Date.today
     task.status = 'On-going'
-    
-    assert_not task.save, "Saved the task without the task_body"
+
+    assert_not task.save, 'Saved the task without the task_body'
   end
 
-  test "This test should not save because there is no deadline" do
+  test 'This test should not save because there is no deadline' do
     task = Task.new
     task.task_name = 'Journal App Project'
     task.task_body = 'This task is to create a journal app with CRUD'
-    #task.deadline = Date.today
+    # task.deadline = Date.today
     task.status = 'On-going'
-    
-    assert_not task.save, "Saved the task without the deadline"
+
+    assert_not task.save, 'Saved the task without the deadline'
   end
 
-   test "This test should not save because there is no status" do
+  test 'This test should not save because there is no status' do
     task = Task.new
     task.task_name = 'Journal App Project'
     task.task_body = 'This task is to create a journal app with CRUD'
     task.deadline = Date.today
-    #task.status = 'On-going'
-    
-    assert_not task.save, "Saved the task without the status"
+    # task.status = 'On-going'
+
+    assert_not task.save, 'Saved the task without the status'
   end
 end
