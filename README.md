@@ -3,7 +3,7 @@
 CREATED BY: mumble-07
 **HEROKU LINK:** https://journal-app-mumble.herokuapp.com/
 
-**ROJECT NAME: TARDIS Lanruoj** 
+**PROJECT NAME: TARDIS Lanruoj** 
 ****Inspired from Doctor Who Series****
 
 TARDIS == Time And Relative Dimension In Space 
